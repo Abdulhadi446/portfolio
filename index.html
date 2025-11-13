@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Hadi | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.videogameschronicle.com/files/2024/11/fortnite-og.jpg"
+    />
+    <meta
+      name="og:title"
+      content="Abdul Hadi – Web & Game Developer. Portfolio showcasing projects in Python, Flask, Unity, and AI development."
+    />
+    <meta
+      name="og:description"
+      content="Abdul Hadi – Web & Game Developer. Portfolio showcasing projects in Python, Flask, Unity, and AI development."
+    />
+
+    <meta
+      property="og:image"
+      content="https://www.videogameschronicle.com/files/2024/11/fortnite-og.jpg"
+    />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:title" content="Abdul Hadi | Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta
+      name="keywords"
+      content="web developer, game developer, python, flask, unity, AI, portfolio"
+    />
+    <meta name="author" content="Abdul Hadi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://example.com" />
+  </head>
+  <body itemscope itemtype="https://schema.org/Person">
+    <header>
+      <nav>
+        <h1 itemprop="name">Abdul Hadi</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h2>Hello, I'm <span itemprop="name">Abdul Hadi</span></h2>
+        <p itemprop="jobTitle">Web & Game Developer | AI Learner</p>
+        <br />
+        <a href="#projects" class="btn">View My Work</a>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p itemprop="description">
+          Short bio and your tech stack will go here.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article
+            class="card"
+            itemscope
+            itemtype="https://schema.org/CreativeWork"
+          >
+            <img
+              src="https://sodeom.com/favicon.ico"
+              alt="Sodi Search Engine"
+            />
+            <h3 itemprop="name">🌐 Sodi Search Engine</h3>
+            <p itemprop="description">
+              A privacy-focused metasearch engine built with Flask and Python.
+            </p>
+            <a
+              href="https://sodeom.com"
+              target="_blank"
+              class="btn"
+              itemprop="url"
+              >View Project</a
+            >
+            <button
+              type="button"
+              class="btn"
+              onclick="toggleDescription('sodi-description')"
+            >
+              Description
+            </button>
+            <p class="hidden-description" id="sodi-description">
+              Sodi is a privacy-focused metasearch engine that aggregates
+              results from multiple search engines without tracking user data.
+              Built with Flask and Python, it offers a clean and user-friendly
+              interface for efficient searching.
+            </p>
+          </article>
+
+          <article
+            class="card"
+            itemscope
+            itemtype="https://schema.org/CreativeWork"
+          >
+            <img src="assets/images/project2.png" alt="Flask Mail App" />
+            <h3 itemprop="name">📧 Flask Mail App</h3>
+            <p itemprop="description">
+              A Flask-based email provider with SMTP and PostgreSQL integration.
+            </p>
+            <a href="#" target="_blank" class="btn" itemprop="url"
+              >View Project</a
+            >
+            <button
+              type="button"
+              class="btn"
+              onclick="toggleDescription('mail-description')"
+            >
+              Description
+            </button>
+            <p class="hidden-description" id="mail-description">
+              A Flask-based email provider that allows users to send and receive
+              emails. It integrates SMTP for email transmission and PostgreSQL
+              for storing user data and emails.
+            </p>
+          </article>
+
+          <article
+            class="card"
+            itemscope
+            itemtype="https://schema.org/CreativeWork"
+          >
+            <img src="assets/images/project3.png" alt="Custom File Explorer" />
+            <h3 itemprop="name">🗂️ File Explorer</h3>
+            <p itemprop="description">
+              A modern CustomTkinter-based Windows-style file explorer.
+            </p>
+            <a href="#" target="_blank" class="btn" itemprop="url"
+              >View Project</a
+            >
+            <button
+              type="button"
+              class="btn"
+              onclick="toggleDescription('file-description')"
+            >
+              Description
+            </button>
+            <p class="hidden-description" id="file-description">
+              A modern CustomTkinter-based Windows-style file explorer. It
+              features a user-friendly interface, file management capabilities,
+              and seamless navigation through directories.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Abdul Hadi | All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
