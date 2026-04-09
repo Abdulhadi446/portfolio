@@ -1,0 +1,35 @@
+---
+import type { SocialLink } from "@/data/schema";
+import { isSafeUrl, safeLabel } from "@/lib/content-utils";
+
+interface Props {
+  links: SocialLink[];
+}
+
+const { links } = Astro.props;
+const visibleLinks = links.filter((link) => link.visible).filter((link) => isSafeUrl(link.url));
+---
+
+<section class="section-card" aria-labelledby="social-links-title">
+  <h2 id="social-links-title" style="margin-top:0;">Connect</h2>
+  <ul
+    id="social-links-list"
+    style="list-style:none;padding:0;margin:0;display:flex;gap:.75rem;flex-wrap:wrap;"
+  >
+    {
+      visibleLinks.map((link) => (
+        <li>
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            class="section-card"
+            style="display:inline-flex;padding:.4rem .8rem;border-radius:999px;"
+          >
+            {safeLabel(link.label, "Link")}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

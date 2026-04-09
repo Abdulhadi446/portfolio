@@ -1,55 +1,90 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: 1.0.0 -> 1.1.0
+- Modified principles:
+  - Static-first delivery -> Static-first delivery (clarified enforcement and deploy paths)
+  - Spec-driven workflow -> Spec-driven workflow (clarified mandatory sequence)
+  - Accessibility baseline -> Accessibility baseline (added measurable non-negotiables)
+  - Design fidelity with clarity -> Design fidelity with clarity (added requirement traceability)
+  - Personal brand accuracy -> Personal brand accuracy (normalized identity constraints)
+  - Reusable content model -> Reusable content model (explicit DRY data modeling rule)
+  - No silent scope drift -> No silent scope drift (explicit change-control requirement)
+- Added sections:
+  - Quality Gates
+  - Development Workflow
+- Removed sections:
+  - None
+- Templates requiring updates:
+  - ✅ /media/abdulhadi/New Volume/AbdulHadi/portfilio/.specify/templates/plan-template.md (reviewed, aligns)
+  - ✅ /media/abdulhadi/New Volume/AbdulHadi/portfilio/.specify/templates/spec-template.md (reviewed, aligns)
+  - ✅ /media/abdulhadi/New Volume/AbdulHadi/portfilio/.specify/templates/tasks-template.md (reviewed, aligns)
+  - ⚠ /media/abdulhadi/New Volume/AbdulHadi/portfilio/.specify/templates/commands/*.md (directory absent; no files to validate)
+  - ✅ /media/abdulhadi/New Volume/AbdulHadi/portfilio/.claude/commands/sp.plan.md (agent-specific reference generalized)
+- Follow-up TODOs:
+  - None
+-->
+# Trillionir Portfolio Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Static-first delivery
+The site MUST build to static assets and MUST remain deployable on GitHub Pages
+(direct Pages or Pages via GitHub Actions). This is non-negotiable because
+delivery simplicity and reproducibility are core to project reliability.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Spec-driven workflow
+All work MUST follow `/sp.specify` -> `/sp.clarify` (if needed) -> `/sp.plan` ->
+`/sp.tasks` -> `/sp.analyze` -> `/sp.implement`. This sequence is required to
+prevent hidden assumptions and preserve end-to-end traceability.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Accessibility baseline
+Every UI change MUST preserve keyboard access, visible focus states, semantic
+HTML structure, and readable contrast. Accessibility is a release gate because
+portfolio quality is judged by usability for all users.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Design fidelity with clarity
+UI decisions MUST follow the agreed dark theme and sketch-inspired card layout,
+and requirements MUST remain measurable and unambiguous. Design consistency is
+required to protect product identity and implementation quality.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Personal brand accuracy
+Hero content MUST represent the canonical brand profile: Name `Trillionir`,
+Role `Full-Stack + Agentic AI Engineer`, and experience positioning
+`intermediate`. Brand truth is mandatory for authenticity and trust.
 
-### [PRINCIPLE_6_NAME]
+### VI. Reusable content model
+Profile, social links, projects, and collaborator entries MUST be data-driven
+and MUST NOT be repeatedly hardcoded in markup. Reuse is required to keep
+content maintainable, consistent, and easy to evolve.
 
+### VII. No silent scope drift
+Any change affecting UX scope, sections, or acceptance criteria MUST be updated
+in spec/plan/tasks before implementation. Governance artifacts are the source of
+truth and MUST stay synchronized with delivered behavior.
 
-[PRINCIPLE__DESCRIPTION]
+## Quality Gates
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- Specs MUST define what/why without leaking implementation details.
+- Plans MUST capture architecture, constraints, sequencing, and risks.
+- Tasks MUST map to concrete requirement coverage and execution order.
+- The analyze step MUST block implementation when critical conflicts exist.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Workflow
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+1. Establish or amend requirements in spec artifacts before coding.
+2. Confirm dependency and sequencing logic in planning artifacts.
+3. Implement only tasks that trace to approved requirements.
+4. Reconcile artifacts immediately when scope or acceptance changes.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- This constitution supersedes ad-hoc planning and implementation decisions.
+- Amendments MUST include explicit edits in this file and a concise rationale.
+- Versioning policy MUST follow semantic versioning:
+  - MAJOR for incompatible principle/governance redefinitions or removals.
+  - MINOR for new principles/sections or materially expanded guidance.
+  - PATCH for clarifications and non-semantic editorial refinements.
+- Compliance review expectation: each planning and implementation cycle MUST
+  verify constitutional adherence before proceeding to the next phase.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.1.0 | **Ratified**: 2026-04-08 | **Last Amended**: 2026-04-08

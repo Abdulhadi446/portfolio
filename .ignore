@@ -1,0 +1,69 @@
+abdulhadi@abdulhadi-HP-ProBook-640-G4:/media/abdulhadi/New Volume/AbdulHadi/portfilio$ sp init .
+███████╗██████╗ ███████╗ ██████╗██╗███████╗██╗ ██╗██████╗ ██╗ ██╗ ██╗███████╗
+██╔════╝██╔══██╗██╔════╝██╔════╝██║██╔════╝╚██╗ ██╔╝██╔══██╗██║ ██║ ██║██╔════╝
+███████╗██████╔╝█████╗ ██║ ██║█████╗ ╚████╔╝ ██████╔╝██║ ██║ ██║███████╗
+╚════██║██╔═══╝ ██╔══╝ ██║ ██║██╔══╝ ╚██╔╝ ██╔═══╝ ██║ ██║ ██║╚════██║
+███████║██║ ███████╗╚██████╗██║██║ ██║ ██║ ███████╗╚██████╔╝███████║
+╚══════╝╚═╝ ╚══════╝ ╚═════╝╚═╝╚═╝ ╚═╝ ╚═╝ ╚══════╝ ╚═════╝ ╚══════╝
+
+                                             Panaversity SpecKit Plus - Spec-Driven Development Toolkit
+
+Warning: Current directory is not empty (11 items)
+Template files will be merged with existing content and may overwrite existing files
+Do you want to continue? [y/N]: y
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ │
+│ Specify Project Setup │
+│ │
+│ Project portfilio │
+│ Working Path /media/abdulhadi/New Volume/AbdulHadi/portfilio │
+│ │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Selected AI assistant: copilot
+Selected script type: sh
+Initialize Specify Project
+├── ● Check required tools (ok)
+├── ● Select AI assistant (copilot)
+├── ● Select script type (sh)
+├── ● Fetch latest release (release v0.0.20 (103,502 bytes))
+├── ● Download template (spec-kit-template-copilot-sh-v0.0.20.zip)
+├── ● Extract template
+├── ● Archive contents (39 entries)
+├── ● Extraction summary (temp 3 items)
+├── ● Ensure scripts executable (0 updated)
+├── ● Cleanup
+├── ● Initialize git repository (existing repo detected)
+└── ● Finalize (project ready)
+
+Project ready.
+
+╭────────────────────────────────────────────────────────────── Agent Folder Security ──────────────────────────────────────────────────────────────╮
+│ │
+│ Some agents may store credentials, auth tokens, or other identifying and private artifacts in the agent folder within your project. │
+│ Consider adding .github/ (or parts of it) to .gitignore to prevent accidental credential leakage. │
+│ │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────── Next Steps ────────────────────────────────────────────────────────────────────╮
+│ │
+│ 1. You're already in the project directory! │
+│ 2. Start using slash commands with your AI agent: │
+│ 2.1 /sp.constitution - Establish project principles │
+│ 2.2 /sp.specify - Create baseline specification │
+│ 2.3 /sp.plan - Create implementation plan │
+│ 2.4 /sp.tasks - Generate actionable tasks │
+│ 2.5 /sp.implement - Execute implementation │
+│ │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────────────────────────────── Enhancement Commands ───────────────────────────────────────────────────────────────╮
+│ │
+│ Optional commands that you can use for your specs (improve quality & confidence) │
+│ │
+│ ○ /sp.clarify (optional) - Ask structured questions to de-risk ambiguous areas before planning (run before /sp.plan if used) │
+│ ○ /sp.analyze (optional) - Cross-artifact consistency & alignment report (after /sp.tasks, before /sp.implement) │
+│ ○ /sp.checklist (optional) - Generate quality checklists to validate requirements completeness, clarity, and consistency (after /sp.plan) │
+│ │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+abdulhadi@abdulhadi-HP-ProBook-640-G4:/media/abdulhadi/New Volume/AbdulHadi/portfilio$

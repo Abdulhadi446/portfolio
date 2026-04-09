@@ -1,0 +1,17 @@
+---
+import type { Collaborator } from "@/data/schema";
+import CollaboratorCard from "@/components/CollaboratorCard.astro";
+
+interface Props {
+  collaborators: Collaborator[];
+}
+
+const { collaborators } = Astro.props;
+---
+
+<section class="section-card" aria-labelledby="collaborators-title">
+  <h2 id="collaborators-title" style="margin-top:0;">Other Trillionaires</h2>
+  <div id="collaborators-list" class="grid grid-2">
+    {collaborators.map((collaborator) => <CollaboratorCard collaborator={collaborator} />)}
+  </div>
+</section>

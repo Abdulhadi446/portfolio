@@ -1,0 +1,20 @@
+---
+import HeroProfile from "@/components/HeroProfile.astro";
+import SocialLinks from "@/components/SocialLinks.astro";
+import ProjectsSection from "@/components/ProjectsSection.astro";
+import CollaboratorsSection from "@/components/CollaboratorsSection.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { collaborators } from "@/data/collaborators";
+import { profile } from "@/data/profile";
+import { projects } from "@/data/projects";
+import { socialLinks } from "@/data/social-links";
+---
+
+<BaseLayout title="Trillionir | Full-Stack + Agentic AI Engineer">
+  <div class="grid" style="gap:1rem;">
+    <HeroProfile profile={profile} />
+    <SocialLinks links={socialLinks} />
+    <ProjectsSection projects={projects} />
+    <CollaboratorsSection collaborators={collaborators} />
+  </div>
+</BaseLayout>

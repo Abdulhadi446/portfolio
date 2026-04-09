@@ -1,0 +1,168 @@
+openapi: 3.0.3
+info:
+  title: Portfolio Content Contract
+  version: 1.0.0
+  description: >
+    Read-only content contract for the Trillionir portfolio baseline. This
+    contract defines stable interfaces for profile and card content resources.
+servers:
+  - url: https://example.github.io
+    description: Static hosting origin (example placeholder)
+paths:
+  /profile:
+    get:
+      summary: Get canonical profile content
+      operationId: getProfile
+      responses:
+        "200":
+          description: Profile content payload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profile"
+  /social-links:
+    get:
+      summary: Get ordered social links
+      operationId: listSocialLinks
+      responses:
+        "200":
+          description: Ordered social links
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SocialLink"
+  /projects:
+    get:
+      summary: Get ordered project cards
+      operationId: listProjects
+      responses:
+        "200":
+          description: Ordered projects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Project"
+  /collaborators:
+    get:
+      summary: Get ordered collaborator cards
+      operationId: listCollaborators
+      responses:
+        "200":
+          description: Ordered collaborators
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Collaborator"
+components:
+  schemas:
+    Profile:
+      type: object
+      required:
+        - name
+        - role
+        - experienceLevel
+      properties:
+        name:
+          type: string
+          const: Trillionir
+        role:
+          type: string
+          const: Full-Stack + Agentic AI Engineer
+        experienceLevel:
+          type: string
+          const: intermediate
+        avatarUrl:
+          type: string
+          format: uri
+        headline:
+          type: string
+          maxLength: 140
+    SocialLink:
+      type: object
+      required:
+        - id
+        - label
+        - url
+        - visible
+        - order
+      properties:
+        id:
+          type: string
+        label:
+          type: string
+          minLength: 1
+          maxLength: 60
+        url:
+          type: string
+          format: uri
+          pattern: "^(https://|mailto:)"
+        visible:
+          type: boolean
+        order:
+          type: integer
+          minimum: 0
+    Project:
+      type: object
+      required:
+        - id
+        - name
+        - summary
+        - url
+        - isAgenticAIHighlight
+        - order
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+          minLength: 1
+          maxLength: 80
+        summary:
+          type: string
+          minLength: 1
+          maxLength: 280
+        url:
+          type: string
+          format: uri
+          pattern: "^https://"
+        isAgenticAIHighlight:
+          type: boolean
+        imageUrl:
+          type: string
+          format: uri
+        order:
+          type: integer
+          minimum: 0
+    Collaborator:
+      type: object
+      required:
+        - id
+        - name
+        - url
+        - isPlaceholder
+        - order
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+          minLength: 1
+          maxLength: 80
+        url:
+          type: string
+          format: uri
+          pattern: "^https://"
+        avatarUrl:
+          type: string
+          format: uri
+        isPlaceholder:
+          type: boolean
+        order:
+          type: integer
+          minimum: 0
