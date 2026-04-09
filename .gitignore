@@ -17,3 +17,4 @@ Thumbs.db
 src/pages/admin.astro
 public/admin-runtime.js
 src/data/site-config.ts
+start.sh
