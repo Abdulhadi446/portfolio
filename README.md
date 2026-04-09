@@ -41,6 +41,12 @@ Schema constraints are defined in `src/data/schema.ts` and aligned with:
 npm run test
 ```
 
+## Public repo security baseline
+
+- CSP, Referrer-Policy, and Permissions-Policy are set in `src/layouts/BaseLayout.astro`
+- Dependency audit is automated in `.github/workflows/security.yml`
+- Secret scanning is automated via Gitleaks in `.github/workflows/security.yml`
+
 Core expectations:
 
 - Hero includes name, role, and intermediate experience positioning
