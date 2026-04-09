@@ -1,0 +1,32 @@
+---
+import type { Collaborator } from "@/data/schema";
+import { isSafeUrl, safeImage } from "@/lib/content-utils";
+
+interface Props {
+  collaborator: Collaborator;
+}
+
+const { collaborator } = Astro.props;
+const safeHref = isSafeUrl(collaborator.url) ? collaborator.url : "https://example.com";
+---
+
+<article class="section-card" aria-label={`Collaborator ${collaborator.name}`}>
+  <div style="display:flex;gap:.75rem;align-items:center;">
+    <img
+      src={safeImage(collaborator.avatarUrl)}
+      alt={`${collaborator.name} avatar`}
+      width="56"
+      height="56"
+      style="border-radius:50%;object-fit:cover;background:#0f172a;"
+    />
+    <div>
+      <h3 style="margin:.1rem 0;">{collaborator.name}</h3>
+      {collaborator.isPlaceholder && <p style="margin:0;color:var(--muted);">Profile details coming soon</p>}
+    </div>
+  </div>
+  <p style="margin:.7rem 0 0;">
+    <a href={safeHref} target="_blank" rel="noreferrer noopener">
+      Open profile
+    </a>
+  </p>
+</article>

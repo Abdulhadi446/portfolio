@@ -1,0 +1,28 @@
+---
+import type { Project } from "@/data/schema";
+import { isSafeUrl } from "@/lib/content-utils";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const safeHref = isSafeUrl(project.url) ? project.url : "https://example.com";
+---
+
+<article class="section-card project-card" aria-label={`Project ${project.name}`} role="listitem">
+  <h3 style="margin-top:0;">{project.name}</h3>
+  <p style="color:var(--muted);">{project.summary}</p>
+  {project.isAgenticAIHighlight && (
+    <p style="margin:.2rem 0 .7rem;">
+      <span
+        style="display:inline-block;background:rgba(34,211,238,.2);color:var(--accent);padding:.2rem .55rem;border-radius:999px;font-size:.85rem;"
+      >
+        Agentic AI Highlight
+      </span>
+    </p>
+  )}
+  <a href={safeHref} target="_blank" rel="noreferrer noopener">
+    Open project
+  </a>
+</article>

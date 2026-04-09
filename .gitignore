@@ -1,0 +1,19 @@
+node_modules/
+dist/
+build/
+.astro/
+coverage/
+*.log
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Admin/dev-only surfaces not part of production deploy
+src/pages/admin.astro
+public/admin-runtime.js
+src/data/site-config.ts

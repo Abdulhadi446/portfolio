@@ -1,0 +1,27 @@
+import { socialLinksSchema, type SocialLink } from "./schema";
+
+const socialLinksData: SocialLink[] = [
+  {
+    id: "github",
+    label: "GitHub",
+    url: "https://github.com/Abdulhadi446",
+    visible: true,
+    order: 1
+  },
+  {
+    id: "linkedin",
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/abdulhadi-junaid-485795378",
+    visible: true,
+    order: 2
+  },
+  {
+    id: "email",
+    label: "Email",
+    url: "mailto:abdulhadijunaidahmedkhan@gmail.com",
+    visible: true,
+    order: 3
+  }
+];
+
+export const socialLinks = socialLinksSchema.parse(socialLinksData).sort((a, b) => a.order - b.order);

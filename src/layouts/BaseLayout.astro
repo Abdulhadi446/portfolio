@@ -1,0 +1,51 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const { title, description = "Full-Stack + Agentic AI Engineer building production-ready experiences with modern web technologies and AI agents.", canonicalUrl } = Astro.props;
+const siteUrl = "https://abdulhadi446.github.io";
+const ogImage = `${siteUrl}/og-image.png`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Trillionir" />
+    <meta name="theme-color" content="#0b1220" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl || siteUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main-content">Skip to content</a>
+    <header class="container" style="padding-block: 1.25rem 0.5rem;">
+      <p id="site-header-title" style="margin:0;color:var(--muted);">Trillionir Portfolio</p>
+    </header>
+    <main id="main-content" class="container" style="padding-block: 0.5rem 2rem;">
+      <slot />
+    </main>
+  </body>
+</html>
