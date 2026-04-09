@@ -2,21 +2,21 @@ import { socialLinksSchema, type SocialLink } from "./schema";
 
 const socialLinksData: SocialLink[] = [
   {
-    id: "github",
+    id: "social-1",
     label: "GitHub",
     url: "https://github.com/Abdulhadi446",
     visible: true,
     order: 1
   },
   {
-    id: "linkedin",
+    id: "social-2",
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/abdulhadi-junaid-485795378",
     visible: true,
     order: 2
   },
   {
-    id: "email",
+    id: "social-3",
     label: "Email",
     url: "mailto:abdulhadijunaidahmedkhan@gmail.com",
     visible: true,

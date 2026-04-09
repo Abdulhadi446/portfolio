@@ -2,14 +2,14 @@ import { collaboratorsSchema, type Collaborator } from "./schema";
 
 const collaboratorsData: Collaborator[] = [
   {
-    id: "trillionaire-01",
+    id: "collaborator-1",
     name: "Amina Rahman",
     url: "https://github.com/",
     isPlaceholder: false,
     order: 1
   },
   {
-    id: "trillionaire-02",
+    id: "collaborator-2",
     name: "Placeholder Collaborator",
     url: "https://example.com/profile",
     isPlaceholder: true,
