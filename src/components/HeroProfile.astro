@@ -20,7 +20,7 @@ const { profile } = Astro.props;
       style="border-radius:50%;border:2px solid rgba(148,163,184,.4);object-fit:cover;background:#0f172a;"
     />
     <div>
-      <h1 id="hero-title" style="margin:.1rem 0 .2rem;letter-spacing:.3px;">{profile.name}</h1>
+      <h1 id="hero-title" data-admin-target="hero-name" style="margin:.1rem 0 .2rem;letter-spacing:.3px;">{profile.name}</h1>
       <p id="hero-role" style="margin:0;color:var(--accent);font-weight:700;">{profile.role}</p>
       <p id="hero-experience" style="margin:.35rem 0 0;color:var(--muted);text-transform:capitalize;">
         Experience: {profile.experienceLevel}

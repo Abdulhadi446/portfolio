@@ -15,6 +15,5 @@ Thumbs.db
 
 # Admin/dev-only surfaces not part of production deploy
 src/pages/admin.astro
-public/admin-runtime.js
-src/data/site-config.ts
+public/admin-panel.js
 start.sh
