@@ -265,9 +265,6 @@
   }
 
   async function resolveConfig() {
-    const local = getStoredConfig();
-    if (local) return normalizeConfig(local);
-
     try {
       const remote = await getRemoteConfig();
       if (remote) {
@@ -279,6 +276,8 @@
       console.error("Remote config load failed:", error);
     }
 
+    const local = getStoredConfig();
+    if (local) return normalizeConfig(local);
     return normalizeConfig(readDefaultConfig());
   }
 
