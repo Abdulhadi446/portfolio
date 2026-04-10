@@ -2,7 +2,7 @@ import { collaboratorsSchema, type Collaborator } from "./schema";
 
 const collaboratorsData: Collaborator[] = [
   {
-    id: "collab-dgnhae",
+    id: "collab-ctbfq9",
     name: "Muhammad Zain",
     url: "https://www.linkedin.com/in/muhammad-zain-359626291/",
     avatarUrl:
@@ -11,7 +11,7 @@ const collaboratorsData: Collaborator[] = [
     order: 0
   },
   {
-    id: "collab-wnteq7",
+    id: "collab-qnrkae",
     name: "arham aftab",
     url: "https://github.com/arham-aftab001",
     avatarUrl: "https://avatars.githubusercontent.com/u/256279757?v=4",
