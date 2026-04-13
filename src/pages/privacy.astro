@@ -1,0 +1,110 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Privacy Policy | Trillionir" canonicalUrl="https://thetrillionair.me/privacy">
+  <article>
+    <h1>Privacy Policy</h1>
+
+    <section>
+      <h2>Overview</h2>
+      <p>This privacy policy explains how Trillionir.me collects, uses, and protects your information.</p>
+    </section>
+
+    <section>
+      <h2>Information We Collect</h2>
+      <p>This is a static portfolio site. We do not actively collect personal data. However:</p>
+      <ul>
+        <li>Visitors may contact me via external links (email, social media)</li>
+        <li>Server logs may record IP addresses and page requests</li>
+        <li>Browser localStorage stores your admin panel edits locally only</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How We Use Information</h2>
+      <ul>
+        <li>Contact information is only used to respond to inquiries</li>
+        <li>Server logs help monitor site performance and security</li>
+        <li>Admin localStorage data never leaves your device</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>This site may integrate with:</p>
+      <ul>
+        <li><strong>Back4App</strong> - For potential backend features (Parse Server)</li>
+        <li><strong>CDN/Hosting</strong> - Standard web hosting infrastructure</li>
+      </ul>
+      <p>Each service has its own privacy policy. We are not responsible for third-party privacy practices.</p>
+    </section>
+
+    <section>
+      <h2>Security</h2>
+      <p>We employ standard security practices:</p>
+      <ul>
+        <li>HTTPS encryption for all traffic</li>
+        <li>Content Security Policy headers</li>
+        <li>No storage of sensitive user data</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>As this site collects minimal data, you have the right to:</p>
+      <ul>
+        <li>Request what data is stored about you</li>
+        <li>Request deletion of your data</li>
+        <li>Opt-out of contact via provided means</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions about this privacy policy? Reach out via the <a href="/">social links on the homepage</a>.</p>
+    </section>
+
+    <section>
+      <h2>Updates</h2>
+      <p>This policy may change. Updates will be posted here with the effective date.</p>
+      <p><strong>Last updated:</strong> April 14, 2026</p>
+    </section>
+  </article>
+
+  <style>
+    article {
+      max-width: 65ch;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--accent, #0ea5e9);
+      text-decoration: underline;
+    }
+  </style>
+</BaseLayout>
