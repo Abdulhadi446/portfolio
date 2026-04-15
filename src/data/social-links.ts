@@ -11,7 +11,7 @@ const socialLinksData: SocialLink[] = [
   {
     id: "social-2",
     label: "LinkedIn",
-    url: "https://www.linkedin.com/in/abdulhadi446/",
+    url: "https://www.linkedin.com/in/abdulhadi-junaid-485795378/",
     visible: true,
     order: 2,
   },
