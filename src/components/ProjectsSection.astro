@@ -15,11 +15,6 @@ const highlightCount = projects.filter((item) => item.isAgenticAIHighlight).leng
     <h2 id="projects-title" style="margin:0;">Projects</h2>
     <p id="projects-position" class="projects-position" aria-live="polite"></p>
   </div>
-  {highlightCount < 1 || highlightCount > 2 ? (
-    <p style="color:var(--danger);margin-top:0;">
-      Data warning: projects should include 1 to 2 Agentic AI highlights.
-    </p>
-  ) : null}
   <div class="projects-rail" aria-label="Projects navigation controls">
     <button type="button" class="projects-nav-btn projects-nav-side" data-projects-nav="prev" aria-label="Show previous projects">
       ←

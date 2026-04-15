@@ -62,14 +62,7 @@ export const socialLinksSchema = z
 export const projectsSchema = z
   .array(projectSchema)
   .superRefine((value, ctx) => {
-    const highlights = value.filter((item) => item.isAgenticAIHighlight).length;
-    if (highlights < 1 || highlights > 2) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message:
-          "Projects must include between 1 and 2 AI/automation highlights.",
-      });
-    }
+    // No limit on AI/automation highlights - infinite allowed
   });
 
 export const collaboratorsSchema = z

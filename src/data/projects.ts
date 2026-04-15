@@ -5,25 +5,25 @@ const projectsData: Project[] = [
     id: "project-1",
     name: "upptime",
     summary: "TO check my websites visiblity an uptime.",
-    url: "https://github.com/Abdulhadi446/upptime",
+    url: "https://abdulhadi446.github.io/upptime/",
     isAgenticAIHighlight: false,
-    order: 1
+    order: 1,
   },
   {
     id: "project-2",
     name: "Mouse-To_Game",
     summary: "Repository: Abdulhadi446/Mouse-To_Game.",
-    url: "https://github.com/Abdulhadi446/Mouse-To_Game",
+    url: "https://abdulhadi446.github.io/Mouse-To_Game/",
     isAgenticAIHighlight: false,
-    order: 2
+    order: 2,
   },
   {
     id: "project-3",
     name: "sodeom",
     summary: "the sodeom search engine sodeom.com",
-    url: "https://github.com/sodeom/sodeom",
+    url: "https://sodeom.com/",
     isAgenticAIHighlight: false,
-    order: 3
+    order: 3,
   },
   {
     id: "project-4",
@@ -31,47 +31,47 @@ const projectsData: Project[] = [
     summary: "Repository: Abdulhadi446/my-model.",
     url: "https://github.com/Abdulhadi446/my-model",
     isAgenticAIHighlight: false,
-    order: 4
+    order: 4,
   },
   {
     id: "project-5",
     name: "agentos",
     summary: "A way to automate everything even anutomation.",
-    url: "https://github.com/agents-os/agentos",
+    url: "https://agentos.sodeom.com/download",
     isAgenticAIHighlight: true,
-    order: 5
+    order: 5,
   },
   {
     id: "project-6",
     name: "moltbook-posts",
     summary: "just some posts idea for moltbook",
-    url: "https://github.com/Abdulhadi446/moltbook-posts",
+    url: "https://www.moltbook.com/u/Sodeom",
     isAgenticAIHighlight: false,
-    order: 6
+    order: 6,
   },
   {
     id: "project-7",
     name: "chatbot",
     summary: "A simple chatbot",
-    url: "https://github.com/Abdulhadi446/chatbot",
+    url: "https://abdulhadi446.github.io/chatbot/",
     isAgenticAIHighlight: true,
-    order: 7
+    order: 7,
   },
   {
     id: "project-8",
     name: "mcq",
     summary: "Repository: Abdulhadi446/mcq.",
-    url: "https://github.com/Abdulhadi446/mcq",
+    url: "https://mcq.sodeom.com",
     isAgenticAIHighlight: false,
-    order: 8
+    order: 8,
   },
   {
     id: "project-9",
     name: "AgentsOSWeb",
-    summary: "AGENTO\"S website",
-    url: "https://github.com/agents-os/AgentsOSWeb",
+    summary: 'AGENTO"S website',
+    url: "https://agentos.sodeom.com/",
     isAgenticAIHighlight: false,
-    order: 10
+    order: 10,
   },
   {
     id: "project-10",
@@ -79,7 +79,7 @@ const projectsData: Project[] = [
     summary: "Repository: Abdulhadi446/clean-summary.",
     url: "https://github.com/Abdulhadi446/clean-summary",
     isAgenticAIHighlight: false,
-    order: 11
+    order: 11,
   },
   {
     id: "project-11",
@@ -87,7 +87,7 @@ const projectsData: Project[] = [
     summary: "Repository: Abdulhadi446/email-signup.",
     url: "https://github.com/Abdulhadi446/email-signup",
     isAgenticAIHighlight: false,
-    order: 13
+    order: 13,
   },
   {
     id: "project-12",
@@ -95,7 +95,7 @@ const projectsData: Project[] = [
     summary: "Repository: Abdulhadi446/Abdulhadi446.github.io.",
     url: "https://github.com/Abdulhadi446/Abdulhadi446.github.io",
     isAgenticAIHighlight: false,
-    order: 14
+    order: 14,
   },
   {
     id: "project-13",
@@ -103,23 +103,23 @@ const projectsData: Project[] = [
     summary: "A collective list of free APIs",
     url: "https://github.com/Abdulhadi446/public-apis",
     isAgenticAIHighlight: false,
-    order: 15
+    order: 15,
   },
   {
     id: "project-14",
     name: "games",
     summary: "A list of 500+ games",
-    url: "https://github.com/Abdulhadi446/games",
+    url: "https://game-list.sodeom.com/",
     isAgenticAIHighlight: false,
-    order: 16
+    order: 16,
   },
   {
     id: "project-15",
     name: "games-of-games",
     summary: "Repository: Abdulhadi446/games-of-games.",
-    url: "https://github.com/Abdulhadi446/games-of-games",
+    url: "https://streamsplay.netlify.app/",
     isAgenticAIHighlight: false,
-    order: 17
+    order: 17,
   },
   {
     id: "project-16",
@@ -127,7 +127,7 @@ const projectsData: Project[] = [
     summary: "this is a progrming langauge like cuda but for CPU's.",
     url: "https://github.com/Abdulhadi446/cores",
     isAgenticAIHighlight: false,
-    order: 18
+    order: 18,
   },
   {
     id: "project-17",
@@ -135,7 +135,7 @@ const projectsData: Project[] = [
     summary: "A set of smeple web utilities an tool.",
     url: "https://github.com/Abdulhadi446/Web-Tools",
     isAgenticAIHighlight: false,
-    order: 19
+    order: 19,
   },
   {
     id: "project-18",
@@ -143,7 +143,7 @@ const projectsData: Project[] = [
     summary: "Learning HTML in 10 days.",
     url: "https://github.com/Abdulhadi446/HTML-basics",
     isAgenticAIHighlight: false,
-    order: 21
+    order: 21,
   },
   {
     id: "project-19",
@@ -151,7 +151,7 @@ const projectsData: Project[] = [
     summary: "Repository: Abdulhadi446/SecureMessaging.",
     url: "https://github.com/Abdulhadi446/SecureMessaging",
     isAgenticAIHighlight: false,
-    order: 22
+    order: 22,
   },
   {
     id: "project-20",
@@ -159,7 +159,7 @@ const projectsData: Project[] = [
     summary: "This is simple blogs publishing site.",
     url: "https://github.com/Abdulhadi446/blogs",
     isAgenticAIHighlight: false,
-    order: 23
+    order: 23,
   },
   {
     id: "project-21",
@@ -167,7 +167,7 @@ const projectsData: Project[] = [
     summary: "there are some animation. made using manim",
     url: "https://github.com/Abdulhadi446/animations",
     isAgenticAIHighlight: false,
-    order: 25
+    order: 25,
   },
   {
     id: "project-22",
@@ -175,7 +175,7 @@ const projectsData: Project[] = [
     summary: "This can convert images into emojis.",
     url: "https://github.com/Abdulhadi446/image2emoji",
     isAgenticAIHighlight: false,
-    order: 26
+    order: 26,
   },
   {
     id: "project-23",
@@ -183,7 +183,7 @@ const projectsData: Project[] = [
     summary: "A simple website like wikipedia",
     url: "https://github.com/Abdulhadi446/wikipedia",
     isAgenticAIHighlight: false,
-    order: 28
+    order: 28,
   },
   {
     id: "project-24",
@@ -191,7 +191,7 @@ const projectsData: Project[] = [
     summary: "An OS run on HTML.",
     url: "https://github.com/Abdulhadi446/HTML-OS",
     isAgenticAIHighlight: false,
-    order: 29
+    order: 29,
   },
   {
     id: "project-25",
@@ -199,7 +199,7 @@ const projectsData: Project[] = [
     summary: "These are my projects",
     url: "https://github.com/Abdulhadi446/MyProjects",
     isAgenticAIHighlight: false,
-    order: 30
+    order: 30,
   },
   {
     id: "project-26",
@@ -207,8 +207,258 @@ const projectsData: Project[] = [
     summary: "GamePublisher site for publishing HTML games",
     url: "https://github.com/Abdulhadi446/GamePublisher",
     isAgenticAIHighlight: false,
-    order: 31
-  }
+    order: 31,
+  },
+  {
+    id: "project-27",
+    name: "itch.io Games",
+    summary: "My game collection on itch.io",
+    url: "https://itch.io/profile/abdulahdi",
+    isAgenticAIHighlight: false,
+    order: 32,
+  },
+  {
+    id: "project-28",
+    name: "SMessages",
+    summary: "A messaging game on itch.io",
+    url: "https://abdulahdi.itch.io/smessages",
+    isAgenticAIHighlight: false,
+    order: 33,
+  },
+  {
+    id: "project-30",
+    name: "sander",
+    summary: "A game on itch.io",
+    url: "https://abdulahdi.itch.io/sander",
+    isAgenticAIHighlight: false,
+    order: 34,
+  },
+  {
+    id: "project-31",
+    name: "Python 3.13",
+    summary: "A Python-based game on itch.io",
+    url: "https://abdulahdi.itch.io/python-313",
+    isAgenticAIHighlight: false,
+    order: 35,
+  },
+  {
+    id: "project-32",
+    name: "Hacker",
+    summary: "A hacking game on itch.io",
+    url: "https://abdulahdi.itch.io/hacker",
+    isAgenticAIHighlight: false,
+    order: 36,
+  },
+  {
+    id: "project-33",
+    name: "Hacked",
+    summary: "A hacking game on itch.io",
+    url: "https://abdulahdi.itch.io/hacked",
+    isAgenticAIHighlight: false,
+    order: 37,
+  },
+  {
+    id: "project-34",
+    name: "OnlineOS",
+    summary: "An online operating system game on itch.io",
+    url: "https://abdulahdi.itch.io/onlineos",
+    isAgenticAIHighlight: false,
+    order: 38,
+  },
+  {
+    id: "project-35",
+    name: "BikeRider",
+    summary: "A bike riding game on itch.io",
+    url: "https://abdulahdi.itch.io/bikerider",
+    isAgenticAIHighlight: false,
+    order: 39,
+  },
+  {
+    id: "project-36",
+    name: "PixelEscape",
+    summary: "A pixel escape game on itch.io",
+    url: "https://abdulahdi.itch.io/pixelescape",
+    isAgenticAIHighlight: false,
+    order: 40,
+  },
+  {
+    id: "project-37",
+    name: "Jarvis on Python",
+    summary: "A Jarvis AI game on itch.io",
+    url: "https://abdulahdi.itch.io/jarvis-on-python",
+    isAgenticAIHighlight: false,
+    order: 41,
+  },
+  {
+    id: "project-38",
+    name: "Windows 11",
+    summary: "A Windows 11 simulator game on itch.io",
+    url: "https://abdulahdi.itch.io/windows11",
+    isAgenticAIHighlight: false,
+    order: 42,
+  },
+  {
+    id: "project-39",
+    name: "Windows 11 v2",
+    summary: "A Windows 11 simulator game on itch.io",
+    url: "https://abdulahdi.itch.io/windows-11",
+    isAgenticAIHighlight: false,
+    order: 43,
+  },
+  {
+    id: "project-40",
+    name: "FlappyBird 2D",
+    summary: "A 2D Flappy Bird game on itch.io",
+    url: "https://abdulahdi.itch.io/flappybird2d",
+    isAgenticAIHighlight: false,
+    order: 44,
+  },
+  {
+    id: "project-41",
+    name: "CarRace",
+    summary: "A car racing game on itch.io",
+    url: "https://abdulahdi.itch.io/carrace",
+    isAgenticAIHighlight: false,
+    order: 45,
+  },
+  {
+    id: "project-42",
+    name: "Tic Tac Toe",
+    summary: "A Tic Tac Toe game on itch.io",
+    url: "https://abdulahdi.itch.io/tic-tac-toe",
+    isAgenticAIHighlight: false,
+    order: 46,
+  },
+  {
+    id: "project-43",
+    name: "MyMultiplayerGame",
+    summary: "A multiplayer game on itch.io",
+    url: "https://abdulahdi.itch.io/mymultiplayergame",
+    isAgenticAIHighlight: false,
+    order: 47,
+  },
+  {
+    id: "project-44",
+    name: "FlappyBird",
+    summary: "A Flappy Bird game on itch.io",
+    url: "https://abdulahdi.itch.io/flappybird",
+    isAgenticAIHighlight: false,
+    order: 48,
+  },
+  {
+    id: "project-45",
+    name: "Sodeom Docs",
+    summary: "Documentation site for Sodeom",
+    url: "https://sodeom-docs.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 49,
+  },
+  {
+    id: "project-46",
+    name: "Emoji Collection",
+    summary: "Emoji collection project",
+    url: "https://emoji-collection.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 50,
+  },
+  {
+    id: "project-47",
+    name: "Email S-Sender",
+    summary: "Email sending application",
+    url: "https://email-s-sender.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 51,
+  },
+  {
+    id: "project-48",
+    name: "Helicon Secondary School",
+    summary: "School website for Helicon Secondary",
+    url: "https://helicon-secondary-school.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 52,
+  },
+  {
+    id: "project-49",
+    name: "Yourngaming",
+    summary: "Gaming platform project",
+    url: "https://yourngaming.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 53,
+  },
+  {
+    id: "project-50",
+    name: "Myjarsyv",
+    summary: "Jarvis AI project",
+    url: "https://myjarsyv.netlify.app/",
+    isAgenticAIHighlight: true,
+    order: 54,
+  },
+  {
+    id: "project-51",
+    name: "Information About Me",
+    summary: "Personal information website",
+    url: "https://information-about-me.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 55,
+  },
+  {
+    id: "project-52",
+    name: "My Game Development",
+    summary: "Game development project",
+    url: "https://my-game-development.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 56,
+  },
+  {
+    id: "project-53",
+    name: "Windows HTML",
+    summary: "Windows OS simulation in HTML",
+    url: "https://windows-html.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 57,
+  },
+  {
+    id: "project-54",
+    name: "Thetrillioniar.me",
+    summary: "Personal portfolio website",
+    url: "https://thetrillioniar.me/",
+    isAgenticAIHighlight: false,
+    order: 58,
+  },
+  {
+    id: "project-55",
+    name: "Hacked Portfolio",
+    summary: "Portfolio with hacking theme",
+    url: "https://hackedportfolio.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 59,
+  },
+  {
+    id: "project-56",
+    name: "Design Templates",
+    summary: "Design templates collection",
+    url: "https://design-templates.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 60,
+  },
+  {
+    id: "project-57",
+    name: "NM Studio",
+    summary: "Creative studio project",
+    url: "https://nm-studio.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 61,
+  },
+  {
+    id: "project-58",
+    name: "Character to Imposter",
+    summary: "Character transformation game",
+    url: "https://character-to-imposter.netlify.app/",
+    isAgenticAIHighlight: false,
+    order: 62,
+  },
 ];
 
-export const projects = projectsSchema.parse(projectsData).sort((a, b) => a.order - b.order);
+export const projects = projectsSchema
+  .parse(projectsData)
+  .sort((a, b) => a.order - b.order);

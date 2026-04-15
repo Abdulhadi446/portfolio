@@ -9,20 +9,20 @@ feature: none
 branch: main
 user: abdulhadi
 command: push to github
-labels: ["git","push","sync"]
+labels: ["git", "push", "sync"]
 links:
   spec: null
   ticket: null
   adr: null
   pr: null
 files:
- - public/site-config-runtime.js
- - src/pages/privacy.astro
- - history/prompts/general/0014-push-to-github.general.prompt.md
- - history/prompts/general/0015-enforce-no-cookies-policy.general.prompt.md
- - history/prompts/general/0016-push-to-github-again.general.prompt.md
+  - public/site-config-runtime.js
+  - src/pages/privacy.astro
+  - history/prompts/general/0014-push-to-github.general.prompt.md
+  - history/prompts/general/0015-enforce-no-cookies-policy.general.prompt.md
+  - history/prompts/general/0016-push-to-github-again.general.prompt.md
 tests:
- - Not run (git operation only)
+  - Not run (git operation only)
 ---
 
 ## Prompt

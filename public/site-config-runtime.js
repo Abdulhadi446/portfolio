@@ -19,17 +19,12 @@
   }
 
   function getStoredConfig() {
-    try {
-      const raw = window.localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : null;
-    } catch (error) {
-      console.error("Local config parse failed:", error);
-      return null;
-    }
+    // Storage disabled - always use defaults
+    return null;
   }
 
   function saveLocalConfig(config) {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(config));
+    // Storage disabled - nothing saved
   }
 
   function normalizeConfig(config) {
@@ -99,10 +94,8 @@
       Array.isArray(config.socialLinks) && config.socialLinks.length > 0
         ? config.socialLinks
         : defaults.socialLinks;
-    normalized.projects =
-      Array.isArray(config.projects) && config.projects.length > 0
-        ? config.projects
-        : defaults.projects;
+    // Projects are always loaded from defaults (code-defined, not user-editable)
+    normalized.projects = defaults.projects;
     normalized.collaborators =
       Array.isArray(config.collaborators) && config.collaborators.length > 0
         ? config.collaborators
@@ -353,11 +346,8 @@
 
   async function resetConfig() {
     const defaults = readDefaultConfig();
-    window.localStorage.removeItem(STORAGE_KEY);
-    if (defaults) {
-      saveLocalConfig(defaults);
-      await saveRemoteConfig(defaults);
-    }
+    // Storage disabled - nothing removed or saved
+    // Note: saveRemoteConfig calls removed as well
     return defaults;
   }
 

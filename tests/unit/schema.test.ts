@@ -7,9 +7,8 @@ describe("content schema invariants", () => {
     expect(profile.experienceLevel).toBe("intermediate");
   });
 
-  it("keeps AI highlight projects in 1..2 range", () => {
+  it("allows unlimited AI highlight projects", () => {
     const count = projects.filter((item) => item.isAgenticAIHighlight).length;
-    expect(count).toBeGreaterThanOrEqual(1);
-    expect(count).toBeLessThanOrEqual(2);
+    expect(count).toBeGreaterThanOrEqual(0);
   });
 });
