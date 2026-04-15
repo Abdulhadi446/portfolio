@@ -114,6 +114,7 @@
   async function parseRequest(method, url, body) {
     const response = await fetch(url, {
       method,
+      credentials: "omit",
       headers: {
         "X-Parse-Application-Id": PARSE_APP_ID,
         "X-Parse-JavaScript-Key": PARSE_JS_KEY,

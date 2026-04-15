@@ -9,16 +9,16 @@ feature: none
 branch: main
 user: abdulhadi
 command: push to github
-labels: ["git","push","deployment"]
+labels: ["git", "push", "deployment"]
 links:
   spec: null
   ticket: null
   adr: null
   pr: null
 files:
- - history/prompts/general/0014-push-to-github.general.prompt.md
+  - history/prompts/general/0014-push-to-github.general.prompt.md
 tests:
- - Not run (git operation only)
+  - Not run (git operation only)
 ---
 
 ## Prompt
