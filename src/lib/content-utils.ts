@@ -1,5 +1,7 @@
 export function safeImage(src?: string): string {
-  return src && src.trim().length > 0 ? src : "/avatars/default-avatar.svg";
+  return src && src.trim().length > 0
+    ? src
+    : "https://thetrillioniar.me/avatars/default-avatar.svg";
 }
 
 export function safeLabel(label: string, fallback = "Untitled"): string {

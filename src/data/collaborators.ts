@@ -5,7 +5,7 @@ const collaboratorsData: Collaborator[] = [
     id: "collab-ctbfq9",
     name: "Muhammad Zain",
     url: "https://www.linkedin.com/in/muhammad-zain-359626291/",
-    avatarUrl: "/avatars/trillioniar1.jpeg",
+    avatarUrl: "https://thetrillioniar.me/avatars/trillioniar1.jpeg",
     isPlaceholder: false,
     order: 0,
   },

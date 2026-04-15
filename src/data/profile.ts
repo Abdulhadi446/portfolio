@@ -4,7 +4,7 @@ const profileData: Profile = {
   name: "Trillionir",
   role: "Full-Stack + Agentic AI Engineer",
   experienceLevel: "intermediate",
-  avatarUrl: "/avatars/my image.png",
+  avatarUrl: "https://thetrillioniar.me/avatars/my%20image.png",
   headline: "I build production-ready full-stack and agentic AI experiences.",
 };
 

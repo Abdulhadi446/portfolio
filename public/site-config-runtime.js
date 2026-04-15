@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = "trillionir.site-config.v1";
-  const DEFAULT_AVATAR = "/avatars/default-avatar.svg";
+  const DEFAULT_AVATAR = "https://thetrillioniar.me/avatars/default-avatar.svg";
   const PARSE_APP_ID = "WeiPkWXczddKmqvapBdmy29XwG3MmRAxtj95hR2C";
   const PARSE_JS_KEY = "yohJ0A1GGJNOkn5Hlq2sJgtBeoDGQh7fdnziAolf";
   const PARSE_API_URL = "https://parseapi.back4app.com/classes/SiteSettings";
@@ -34,39 +34,75 @@
 
   function normalizeConfig(config) {
     const defaults = readDefaultConfig();
-    if (!defaults || !config || typeof config !== "object") return defaults || config;
+    if (!defaults || !config || typeof config !== "object")
+      return defaults || config;
 
-    const profileSource = config.profile && typeof config.profile === "object" ? config.profile : {};
-    const labelsSource = config.labels && typeof config.labels === "object" ? config.labels : {};
+    const profileSource =
+      config.profile && typeof config.profile === "object"
+        ? config.profile
+        : {};
+    const labelsSource =
+      config.labels && typeof config.labels === "object" ? config.labels : {};
 
     const normalized = {
       ...defaults,
       ...config,
       profile: {
         ...defaults.profile,
-        ...profileSource
+        ...profileSource,
       },
       labels: {
         ...defaults.labels,
-        ...labelsSource
-      }
+        ...labelsSource,
+      },
     };
 
-    normalized.profile.name = toText(normalized.profile.name, defaults.profile.name);
-    normalized.profile.role = toText(normalized.profile.role, defaults.profile.role);
-    normalized.profile.experienceLevel = toText(normalized.profile.experienceLevel, defaults.profile.experienceLevel);
-    normalized.profile.headline = toText(normalized.profile.headline, defaults.profile.headline || "");
-    normalized.profile.avatarUrl = toText(normalized.profile.avatarUrl, defaults.profile.avatarUrl || DEFAULT_AVATAR);
+    normalized.profile.name = toText(
+      normalized.profile.name,
+      defaults.profile.name,
+    );
+    normalized.profile.role = toText(
+      normalized.profile.role,
+      defaults.profile.role,
+    );
+    normalized.profile.experienceLevel = toText(
+      normalized.profile.experienceLevel,
+      defaults.profile.experienceLevel,
+    );
+    normalized.profile.headline = toText(
+      normalized.profile.headline,
+      defaults.profile.headline || "",
+    );
+    normalized.profile.avatarUrl = toText(
+      normalized.profile.avatarUrl,
+      defaults.profile.avatarUrl || DEFAULT_AVATAR,
+    );
 
-    normalized.labels.siteHeader = toText(normalized.labels.siteHeader, defaults.labels.siteHeader);
-    normalized.labels.connectTitle = toText(normalized.labels.connectTitle, defaults.labels.connectTitle);
-    normalized.labels.projectsTitle = toText(normalized.labels.projectsTitle, defaults.labels.projectsTitle);
-    normalized.labels.collaboratorsTitle = toText(normalized.labels.collaboratorsTitle, defaults.labels.collaboratorsTitle);
+    normalized.labels.siteHeader = toText(
+      normalized.labels.siteHeader,
+      defaults.labels.siteHeader,
+    );
+    normalized.labels.connectTitle = toText(
+      normalized.labels.connectTitle,
+      defaults.labels.connectTitle,
+    );
+    normalized.labels.projectsTitle = toText(
+      normalized.labels.projectsTitle,
+      defaults.labels.projectsTitle,
+    );
+    normalized.labels.collaboratorsTitle = toText(
+      normalized.labels.collaboratorsTitle,
+      defaults.labels.collaboratorsTitle,
+    );
 
     normalized.socialLinks =
-      Array.isArray(config.socialLinks) && config.socialLinks.length > 0 ? config.socialLinks : defaults.socialLinks;
+      Array.isArray(config.socialLinks) && config.socialLinks.length > 0
+        ? config.socialLinks
+        : defaults.socialLinks;
     normalized.projects =
-      Array.isArray(config.projects) && config.projects.length > 0 ? config.projects : defaults.projects;
+      Array.isArray(config.projects) && config.projects.length > 0
+        ? config.projects
+        : defaults.projects;
     normalized.collaborators =
       Array.isArray(config.collaborators) && config.collaborators.length > 0
         ? config.collaborators
@@ -81,14 +117,16 @@
       headers: {
         "X-Parse-Application-Id": PARSE_APP_ID,
         "X-Parse-JavaScript-Key": PARSE_JS_KEY,
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: body ? JSON.stringify(body) : undefined
+      body: body ? JSON.stringify(body) : undefined,
     });
 
     if (!response.ok) {
       const details = await response.text();
-      throw new Error(`Remote config request failed (${response.status}): ${details || "unknown error"}`);
+      throw new Error(
+        `Remote config request failed (${response.status}): ${details || "unknown error"}`,
+      );
     }
 
     return response.json();
@@ -96,10 +134,15 @@
 
   async function getRemoteConfig() {
     const where = encodeURIComponent(JSON.stringify({ scope: GLOBAL_SCOPE }));
-    const data = await parseRequest("GET", `${PARSE_API_URL}?where=${where}&limit=1`);
+    const data = await parseRequest(
+      "GET",
+      `${PARSE_API_URL}?where=${where}&limit=1`,
+    );
     const first = Array.isArray(data.results) ? data.results[0] : null;
     remoteObjectId = first && first.objectId ? first.objectId : null;
-    return first && first.config && typeof first.config === "object" ? first.config : null;
+    return first && first.config && typeof first.config === "object"
+      ? first.config
+      : null;
   }
 
   async function saveRemoteConfig(config) {
@@ -111,7 +154,10 @@
     }
 
     const where = encodeURIComponent(JSON.stringify({ scope: GLOBAL_SCOPE }));
-    const existing = await parseRequest("GET", `${PARSE_API_URL}?where=${where}&limit=1`);
+    const existing = await parseRequest(
+      "GET",
+      `${PARSE_API_URL}?where=${where}&limit=1`,
+    );
     const first = Array.isArray(existing.results) ? existing.results[0] : null;
     if (first && first.objectId) {
       remoteObjectId = first.objectId;
@@ -132,7 +178,8 @@
   function toSafeUrl(url, fallback) {
     try {
       const parsed = new URL(url);
-      if (parsed.protocol === "https:" || parsed.protocol === "mailto:") return url;
+      if (parsed.protocol === "https:" || parsed.protocol === "mailto:")
+        return url;
       return fallback;
     } catch {
       return fallback;
@@ -146,10 +193,20 @@
     const projectsTitle = document.getElementById("projects-title");
     const collaboratorsTitle = document.getElementById("collaborators-title");
 
-    if (siteHeader) siteHeader.textContent = toText(labels.siteHeader, "Trillionir Portfolio");
-    if (socialTitle) socialTitle.textContent = toText(labels.connectTitle, "Connect");
-    if (projectsTitle) projectsTitle.textContent = toText(labels.projectsTitle, "Projects");
-    if (collaboratorsTitle) collaboratorsTitle.textContent = toText(labels.collaboratorsTitle, "Other Trillionaires");
+    if (siteHeader)
+      siteHeader.textContent = toText(
+        labels.siteHeader,
+        "Trillionir Portfolio",
+      );
+    if (socialTitle)
+      socialTitle.textContent = toText(labels.connectTitle, "Connect");
+    if (projectsTitle)
+      projectsTitle.textContent = toText(labels.projectsTitle, "Projects");
+    if (collaboratorsTitle)
+      collaboratorsTitle.textContent = toText(
+        labels.collaboratorsTitle,
+        "Other Trillionaires",
+      );
   }
 
   function applyProfile(profile) {
@@ -161,10 +218,16 @@
     const heroAvatar = document.getElementById("hero-avatar");
 
     if (heroName) heroName.textContent = toText(profile.name, "Trillionir");
-    if (heroRole) heroRole.textContent = toText(profile.role, "Full-Stack + Agentic AI Engineer");
-    if (heroExperience) heroExperience.textContent = `Experience: ${toText(profile.experienceLevel, "intermediate")}`;
+    if (heroRole)
+      heroRole.textContent = toText(
+        profile.role,
+        "Full-Stack + Agentic AI Engineer",
+      );
+    if (heroExperience)
+      heroExperience.textContent = `Experience: ${toText(profile.experienceLevel, "intermediate")}`;
     if (heroHeadline) heroHeadline.textContent = toText(profile.headline, "");
-    if (heroAvatar) heroAvatar.setAttribute("src", toText(profile.avatarUrl, DEFAULT_AVATAR));
+    if (heroAvatar)
+      heroAvatar.setAttribute("src", toText(profile.avatarUrl, DEFAULT_AVATAR));
   }
 
   function applySocialLinks(links) {
@@ -303,7 +366,7 @@
     saveConfig,
     resetConfig,
     applyConfig,
-    readDefaultConfig
+    readDefaultConfig,
   };
 
   window.addEventListener("DOMContentLoaded", async function () {
