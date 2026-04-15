@@ -9,11 +9,18 @@ const socialLinksData: SocialLink[] = [
     order: 1,
   },
   {
+    id: "social-2",
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/abdulhadi446/",
+    visible: true,
+    order: 2,
+  },
+  {
     id: "social-3",
     label: "Email",
     url: "mailto:abdulhadijunaidahmedkhan@gmail.com",
     visible: true,
-    order: 2,
+    order: 3,
   },
 ];
 
