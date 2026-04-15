@@ -14,12 +14,10 @@ import { socialLinks } from "@/data/social-links";
 <BaseLayout title="Trillionir | Full-Stack + Agentic AI Engineer">
   <script id="site-default-config" type="application/json" set:html={JSON.stringify(defaultSiteConfig)} />
   <div class="grid" style="gap:1rem;">
-    <div style="text-align:center;margin:2rem 0;">
-      <a href="/blogs" style="font-size:1.3rem;font-weight:600;color:#0070f3;text-decoration:underline;">Read Trillionir Blogs</a>
-    </div>
     <HeroProfile profile={profile} />
     <SocialLinks links={socialLinks} />
     <ProjectsSection projects={projects} />
     <CollaboratorsSection collaborators={collaborators} />
   </div>
+  <slot name="footer" />
 </BaseLayout>
